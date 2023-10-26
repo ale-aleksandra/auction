@@ -19,10 +19,10 @@ def find_highest_bidder(bidding_record):
 
 
 while not bidding_finised:
-    name = input("What's your name? ")
-    price = input("What's your bid? $")
+    name = input("What's your name?: ")
+    price = int(input("What's your bid?: $"))
     bids[name] = price
-    should_continue = input("Are there any other bidders? Type 'yes' or 'no'. ")
+    should_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n ")
     if should_continue == 'no':
         bidding_finised = True
         find_highest_bidder(bids)
